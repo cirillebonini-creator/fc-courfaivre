@@ -68,7 +68,7 @@
   border-block: 1px solid #ffffff29;
 }
 .match-club { display: grid; justify-items: center; gap: 8px; font-size: 13px; font-weight: 800; }
-.match-club img { display: block; width: clamp(46px, 7vw, 64px); height: auto; aspect-ratio: 1; object-fit: contain; }
+.match-club img { display: block; width: clamp(64px, 10vw, 96px); height: auto; aspect-ratio: 1; object-fit: contain; }
 .match-score { display: grid; gap: 5px; align-self: center; color: var(--yellow); }
 .match-score strong { font-size: clamp(44px, 7vw, 72px); line-height: .95; letter-spacing: -.07em; white-space: nowrap; }
 .match-score span { font-size: 11px; font-weight: 750; text-transform: uppercase; letter-spacing: .09em; }

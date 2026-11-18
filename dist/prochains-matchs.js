@@ -1,5 +1,5 @@
 (() => {
-  const crests = { 'FC Courfaivre': 'blasons/10110.jpg', 'FC Courtemaîche': 'blasons/10114.jpg', 'FC Haute-Sorne': 'blasons/10163.jpg' };
+  const crests = { 'FC La Courtine': 'blasons/10121.gif', 'FC Courfaivre': 'blasons/10110.jpg', 'FC Courtemaîche': 'blasons/10114.jpg', 'FC Haute-Sorne': 'blasons/10163.jpg' };
   const dateFormat = new Intl.DateTimeFormat('fr-CH', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Zurich' });
   const stampFormat = new Intl.DateTimeFormat('fr-CH', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Zurich' });
   const node = (tag, cls, text) => { const el = document.createElement(tag); el.className = cls; if (text) el.textContent = text; return el; };
