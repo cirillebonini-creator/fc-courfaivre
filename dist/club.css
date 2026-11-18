@@ -302,3 +302,21 @@
 
 .ranking-club { display: inline-flex; align-items: center; gap: 10px; }
 .ranking-club img { width: 32px; height: 32px; flex: 0 0 32px; object-fit: contain; background: white; border-radius: 3px; }
+
+/* Pages des équipes : classement clair, rencontres sur fond noir. */
+.club-site.team-page .standings { background: #fff; color: #101110; }
+.club-site.team-page .standings .section-head h2 { color: #101110; }
+.team-page .standings-card { background: #fff; border-color: #d9d8d0; }
+.team-page .standings-status, .team-page .standings-legend { color: #575951; }
+.club-site.team-page .fcc-ranking { background: #fff; color: #101110; }
+.club-site.team-page .fcc-ranking thead th { background: #f4f3ed; color: #101110; }
+.club-site.team-page .fcc-ranking tbody tr { background: #fff; color: #101110; }
+.club-site.team-page .fcc-ranking tbody tr:nth-child(even) { background: #f4f3ed; color: #101110; }
+.club-site.team-page .fcc-ranking td, .club-site.team-page .fcc-ranking tbody th { border-color: #d9d8d0; }
+.club-site.team-page .fcc-ranking tbody tr.standings-fcc { background: #ffdc32; color: #101110; }
+.team-page .standings-official { border-color: #d9d8d0; }
+.team-page .standings-official summary { color: #101110; }
+.club-site.team-page .team-upcoming { background: #101110; color: #fff; }
+.team-upcoming .section-head h2, .team-upcoming .section-head a { color: #ffdc32; }
+.team-upcoming-content { max-width: 760px; }
+.team-upcoming-content > p { line-height: 1.6; }
