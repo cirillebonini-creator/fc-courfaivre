@@ -320,3 +320,16 @@
 .team-upcoming .section-head h2, .team-upcoming .section-head a { color: #ffdc32; }
 .team-upcoming-content { max-width: 760px; }
 .team-upcoming-content > p { line-height: 1.6; }
+
+/* Bannière FCC : photographies stylisées, identité et actions en HTML. */
+.club-site .hero.hero-fcc{position:relative;isolation:isolate;min-height:clamp(460px,34vw,640px);padding:34px 0 42px;background:#090a09 url('hero-fcc.webp') center/cover no-repeat;text-align:center}
+.club-site .hero-fcc .hero-fcc-content{width:min(560px,42%);display:flex;flex-direction:column;align-items:center;gap:0}
+.hero-fcc-crest{display:block;width:clamp(150px,12.5vw,250px);height:auto;filter:drop-shadow(0 8px 20px #0008);margin-bottom:16px}
+.club-site .hero-fcc h1{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:clamp(34px,3.5vw,64px);font-weight:800;line-height:1;letter-spacing:-.012em;margin:0 0 12px;white-space:nowrap;color:#fff}
+.hero-fcc-since{display:flex;align-items:center;justify-content:center;gap:15px;font:600 17px/1.4 Inter,Arial,sans-serif;margin:0 0 22px;color:#fff}
+.hero-fcc-since::before,.hero-fcc-since::after{content:'';width:46px;height:2px;background:var(--yellow)}
+.hero-fcc .actions{justify-content:center;gap:12px}
+.club-site .hero-fcc .button{font-family:Inter,Arial,sans-serif;font-size:13px;text-transform:none;letter-spacing:0;min-width:140px;border-radius:4px}
+.hero-photo-credit{position:absolute;bottom:10px;right:16px;color:#ddd;font:italic 12px Georgia,serif}
+@media(max-width:850px){.club-site .hero.hero-fcc{min-height:460px;background-size:auto 100%}.club-site .hero-fcc .hero-fcc-content{width:min(440px,60%)}.hero-fcc .actions{gap:8px}.club-site .hero-fcc .button{min-width:120px;padding:12px}.hero-fcc-crest{width:160px}}
+@media(max-width:600px){.club-site .hero.hero-fcc{min-height:530px;padding:32px 0 45px;background-image:linear-gradient(#090a0990,#090a09db),url('hero-fcc.webp');background-position:center,right center;background-size:cover,auto 100%}.club-site .hero-fcc .hero-fcc-content{width:calc(100% - 32px);max-width:400px}.hero-fcc-crest{width:190px;margin-bottom:20px}.club-site .hero-fcc h1{font-size:clamp(34px,9vw,48px)}.hero-fcc-since{font-size:16px}.club-site .hero-fcc .button{min-width:130px}}
