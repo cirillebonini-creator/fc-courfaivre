@@ -289,3 +289,10 @@
 /* Accès, lisibilité et navigation */
 .club-site nav a{min-height:44px;display:inline-flex;align-items:center}.club-site .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.contact-panel{padding:32px;background:#fff;border-top:4px solid var(--yellow)}.club-site .contact-panel h2{font-size:clamp(28px,3vw,40px);line-height:1.1}.contact-panel address{font-style:normal;line-height:1.8;margin:18px 0 24px}.contact-panel p{line-height:1.65}.contact-panel .button{max-width:100%;overflow-wrap:anywhere}.club-site footer a{min-height:44px;display:inline-flex;align-items:center}.club-site .asf-results summary,.club-site .standings-official summary{padding:12px 0;font-size:14px;font-weight:600}.club-site .asf-results,.club-site .standings-official{border-top:1px solid var(--line);margin-top:16px}.club-site .caption a{display:inline-block;padding-block:8px}
 @media(max-width:650px){.club-site .contact-grid{grid-template-columns:1fr}.contact-panel{padding:24px}.club-site header .wrap{gap:16px}.club-site nav{gap:4px 16px}.club-site nav a{font-size:16px}.club-site .hero h1{font-size:clamp(52px,12vw,78px)}}
+
+/* Alignement uniforme du menu principal */
+.club-site header nav[aria-label="Navigation principale"]{align-items:center}
+.club-site header nav[aria-label="Navigation principale"]>.club-menu{align-self:center}
+.club-site header nav[aria-label="Navigation principale"]>.club-menu>summary{display:flex;align-items:center;min-height:44px;box-sizing:border-box;line-height:1.1}
+.club-site header .club-menu>summary::after{display:inline-block;line-height:1}
+@media(max-width:650px){.club-site header .club-menu>summary{font-size:16px}}
