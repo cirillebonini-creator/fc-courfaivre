@@ -1,12 +1,17 @@
 (() => {
-  const crests = { 'FC La Courtine': 'blasons/10121.gif', 'FC Courfaivre': 'blasons/10110.jpg', 'FC Courtemaîche': 'blasons/10114.jpg', 'FC Haute-Sorne': 'blasons/10163.jpg' };
+  const crestIds = {"FC Courfaivre":"10110","FC Bure":"10106","FC Haute-Ajoie":"10164","FC Porrentruy":"10131","FC Lugnez-Damphreux":"10125","FC Coeuve":"10154","FC Alle":"10101","FC Courtedoux":"10142","FC Ajoie-Monterri":"10171","FC Glovelier":"10122","FC Vendlincourt":"10158","FC La Courtine":"10121","FC Perrefitte":"10130","FC Rebeuvelier":"10132","CS Vallon":"10173","SR Delémont":"10117","Birse Football Club":"10174","FC Vicques":"10139","FC Franches-Montagnes":"10145","FC Haute-Sorne":"10163","CS Belprahon":"10159","FC Develier":"10118","FC Courtételle":"10115","FC Bassecourt":"10102","FC Courrendlin-Courroux":"10172","FC Clos du Doubs":"10153","FC Aesch":"3501","FC Val Terbi":"10168","FC La Neuveville-Lamboing":"10254","FC Courtemaîche":"10114"};
+  const crestFor = name => {
+    const clean = name.replace(/\s*\([^)]*\)/g, '').replace(/\s+[abc]$/i, '').trim();
+    const id = crestIds[clean];
+    return id ? 'blasons/' + id + '.gif' : null;
+  };
   const dateFormat = new Intl.DateTimeFormat('fr-CH', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Zurich' });
   const stampFormat = new Intl.DateTimeFormat('fr-CH', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Zurich' });
   const node = (tag, cls, text) => { const el = document.createElement(tag); el.className = cls; if (text) el.textContent = text; return el; };
   function club(name) {
     const el = node('div', 'match-club');
-    if (crests[name]) {
-      const img = node('img', ''); img.src = crests[name]; img.alt = ''; img.width = 80; img.height = 80; el.append(img);
+    if (crestFor(name)) {
+      const img = node('img', ''); img.src = crestFor(name); img.addEventListener('error', () => img.remove(), { once: true }); img.alt = ''; img.width = 80; img.height = 80; el.append(img);
     } else {
       const initials = name.replace(/^FC\s+/i, '').split(/[\s-]+/).map(x => x[0]).slice(0, 3).join('');
       const badge = node('span', 'club-monogram', initials); badge.setAttribute('aria-hidden', 'true'); el.append(badge);
