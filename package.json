@@ -1,0 +1,13 @@
+{
+  "name": "fc-courfaivre",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "build": "node worker/build.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "backup": "node scripts/backup.mjs"
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Joueurs · Administration FC Courfaivre</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="/"><span aria-hidden="true">//</span> FC COURFAIVRE</a><nav aria-label="Administration"><a href="/">Voir le site ↗</a></nav></div></header>
+<main class="wrap admin">
+  <div class="section-head"><h1>Joueurs</h1><button class="button" id="new-player" disabled>Ajouter un joueur</button></div>
+  <div class="admin-filters">
+    <label>Équipe<select id="team-filter"><option value="">Toutes les équipes</option><option value="premiere">Première équipe</option><option value="deuxieme">Deuxième équipe</option><option value="veterans">Vétérans</option></select></label>
+    <label>Rechercher<input type="search" id="player-search" placeholder="Prénom ou nom"></label>
+  </div>
+  <p id="admin-status" role="status">Chargement des effectifs…</p>
+  <ul id="admin-players" class="admin-list"></ul>
+  <dialog id="player-dialog" aria-labelledby="form-title">
+    <form id="player-form">
+      <div class="section-head"><h2 id="form-title">Joueur</h2><button type="button" id="close-player" aria-label="Fermer">Fermer</button></div>
+      <div class="admin-fields">
+        <label>Prénom<input name="firstName" required maxlength="100"></label>
+        <label>Nom<input name="lastName" required maxlength="100"></label>
+        <label>Équipe<select name="team" required><option value="premiere">Première équipe</option><option value="deuxieme">Deuxième équipe</option><option value="veterans">Vétérans</option></select></label>
+        <label>Nationalité<input name="nationality" maxlength="100"></label>
+        <label>Poste<input name="position" maxlength="100" list="positions"></label>
+        <datalist id="positions"><option>But</option><option>Défense</option><option>Demi</option><option>Attaque</option><option>Remplacement</option></datalist>
+        <label>Portrait<input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+      </div>
+      <img id="current-portrait" alt="Portrait actuel" width="96" height="96" hidden>
+      <label id="remove-portrait" hidden><input name="removePhoto" type="checkbox"> Retirer le portrait actuel</label>
+      <p id="form-status" role="status"></p>
+      <div class="actions"><button class="button" type="submit">Enregistrer</button><button id="delete-player" type="button">Retirer de l’effectif</button></div>
+    </form>
+  </dialog>
+</main>
+</body></html>
