@@ -79,10 +79,10 @@ async function updatePlayer(request, db, suppliedId) {
 
 function assetResponse(path, head) {
   const asset = assets[path];
-  if (!asset) return new Response('Page introuvable', { status: 404 });
+  if (!asset) return new Response('Page introuvable', { status: 404, headers: { 'Cache-Control': 'no-store' } });
   const [type, body, binary] = asset;
   return new Response(head ? null : binary ? Uint8Array.from(atob(body), c => c.charCodeAt(0)) : body, {
-    headers: { 'Content-Type': type, 'X-Content-Type-Options': 'nosniff' }
+    headers: { 'Content-Type': type, 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'no-cache' }
   });
 }
 

@@ -1,5 +1,5 @@
 import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises';
-const types = { html: 'text/html; charset=utf-8', css: 'text/css; charset=utf-8', js: 'text/javascript; charset=utf-8', jpg: 'image/jpeg', webp: 'image/webp', png: 'image/png', svg: 'image/svg+xml' };
+const types = { html: 'text/html; charset=utf-8', css: 'text/css; charset=utf-8', js: 'text/javascript; charset=utf-8', jpg: 'image/jpeg', webp: 'image/webp', png: 'image/png', gif: 'image/gif', svg: 'image/svg+xml' };
 const assets = {};
 for (const name of await readdir('dist', { recursive: true })) {
   if (name.startsWith('server/')) continue;
