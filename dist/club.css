@@ -296,3 +296,6 @@
 .club-site header nav[aria-label="Navigation principale"]>.club-menu>summary{display:flex;align-items:center;min-height:44px;box-sizing:border-box;line-height:1.1}
 .club-site header .club-menu>summary::after{display:inline-block;line-height:1}
 @media(max-width:650px){.club-site header .club-menu>summary{font-size:16px}}
+
+/* Logos des partenaires */
+.partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;list-style:none;padding:0;margin:30px 0 36px}.partner-logo{display:grid;place-items:center;min-height:210px;background:#fff;border:1px solid var(--line);padding:24px}.partner-logo img{display:block;width:100%;max-width:260px;height:170px;object-fit:contain}.partner-join{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.partner-join p{margin:0}@media(max-width:500px){.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.partner-logo{padding:16px;min-height:150px}.partner-logo img{height:120px}}
